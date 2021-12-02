@@ -14,9 +14,10 @@ def guropiIteration(filePath):
     a = np.random.rand(20, 20)
 
     cap = np.random.rand(20)
+    timeLimit = 3 * 60
     
     parametersPath = "./parameters.json"
-    s = Solver(cost, a, cap, parametersPath)
+    s = Solver(cost, a, cap, parametersPath, timeLimit)
     s.solve() 
     s.save(filePath.split(".")[0])
 

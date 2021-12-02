@@ -17,7 +17,8 @@ class Solver:
     parameters = {}
     parametersCombinations = []
 
-    def __init__(self, cost, a, capacity, parametersPath):
+    def __init__(self, cost, a, capacity, parametersPath,timeLimit):
+        self.timeLimit = timeLimit
         self.cost = cost
         self.a = a
         self.cap = capacity
@@ -74,6 +75,8 @@ class Solver:
 
     def _gurobi(self,index):
         self.model = Model("Generalized_Assigment")
+        if self.timeLimit:
+            self.model.setParam("TimeLimit", self.timeLimit)
         self._setModelParameters(index)
         numT,numC = np.shape(self.cost)
           
