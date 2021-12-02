@@ -18,7 +18,6 @@ def fileRetriever(filePath):
 
 def guropiIteration(filePath,timeLimit=None):
     
-    #Mudar isso, só está mokado
     cost, a, cap = fileRetriever("./inputs/"+filePath)
     
     parametersPath = "./parameters.json"
