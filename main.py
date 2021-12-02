@@ -5,16 +5,21 @@ import os
 # c = n = colunas
 # a[i, j]:matrix = capacidade consumida do agente i ao realizar a tarefa j  
 # cap[i]:list = capacidade do agente i
+def fileRetriever(filePath):
+    with open(filePath, "r") as f:
+        lines = f.readlines()
+    matrixLines = int(lines[0].split(" ")[0])
+    getList = lambda lineStart, lineSize: [[int(item) for item in line.strip().split()] for line in lines[lineStart:lineStart+lineSize]]
+    firstList = np.array(getList(1, matrixLines))
+    secondList = np.array(getList(matrixLines+1, matrixLines))
+    thirdList = np.array([int(i) for i in lines[-1].strip().split()])
 
-def guropiIteration(filePath):
+    return firstList, secondList, thirdList
+
+def guropiIteration(filePath,timeLimit=None):
     
     #Mudar isso, só está mokado
-    cost = np.random.rand(20, 20)
-
-    a = np.random.rand(20, 20)
-
-    cap = np.random.rand(20)
-    timeLimit = 3 * 60
+    cost, a, cap = fileRetriever("./inputs/"+filePath)
     
     parametersPath = "./parameters.json"
     s = Solver(cost, a, cap, parametersPath, timeLimit)
@@ -22,10 +27,15 @@ def guropiIteration(filePath):
     s.save(filePath.split(".")[0])
 
 
+
+
+
+
 def main():
+    timeLimit = 3 * 60
     filesList = [i for i in os.listdir("./inputs/") if ".in" in i]
     for i in range(len(filesList)):
-        guropiIteration(filesList[i])
+        guropiIteration(filesList[i],timeLimit)
 
 
 if __name__ == "__main__":
