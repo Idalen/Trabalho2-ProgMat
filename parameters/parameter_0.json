@@ -15,7 +15,7 @@
     "Cuts":{
         "shutOff": 0
     },
-    "Cuts Type 0":{
+    "NetworkCuts":{
         "moderated" : 1,
         "aggressive" : 2
     }
