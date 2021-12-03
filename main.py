@@ -18,11 +18,11 @@ def fileRetriever(filePath):
 
 def guropiIteration(filePath,timeLimit=None):
     
-    #Mudar isso, só está mokado
     cost, a, cap = fileRetriever("./inputs/"+filePath)
     
-    parametersPath = "./parameters.json"
-    s = Solver(cost, a, cap, parametersPath, timeLimit)
+    parametersPath = "./parameters"
+    rulesPath = "./rules.txt"
+    s = Solver(cost, a, cap, parametersPath, rulesPath, timeLimit)
     s.solve() 
     s.save(filePath.split(".")[0])
 

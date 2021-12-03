@@ -1,0 +1,22 @@
+{
+    "Presolve":{
+        "off": 0,
+        "conservative": 1,
+        "agressive": 2
+    },
+    "BranchDir":{
+        "Minimum Value": -1,
+        "Maximum Value": 1
+    },
+    "NodeMethod": {
+        "primal simplex": 0, 
+        "dual simplex" : 1
+    },
+    "Cuts":{
+        "shutOff": 0
+    },
+    "Cuts Type 0":{
+        "moderated" : 1,
+        "aggressive" : 2
+    }
+}

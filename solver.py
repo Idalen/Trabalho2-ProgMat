@@ -4,6 +4,7 @@ from dataclasses import dataclass
 import json
 import numpy as np
 import pandas as pd
+import os
 
 @dataclass
 class results:
@@ -17,7 +18,8 @@ class Solver:
     parameters = {}
     parametersCombinations = []
 
-    def __init__(self, cost, a, capacity, parametersPath,timeLimit):
+    def __init__(self, cost, a, capacity, parametersPath, rulesPath, timeLimit):
+        self.rulesPath = rulesPath
         self.timeLimit = timeLimit
         self.cost = cost
         self.a = a
@@ -25,9 +27,14 @@ class Solver:
         self._setParameters(parametersPath)
         
     def _setParameters(self,parametersPath):
-        with open(parametersPath) as f:
-            self.parameters = json.load(f)
-        self._setParametersCombinations()
+        paramsFiles = [f for f in os.listdir(parametersPath) if f.split(".")[-1] == "json"]
+        for paramsFile in paramsFiles:
+            with open(parametersPath+"/"+paramsFile) as f:
+                self.parameters = json.load(f)
+            self._setParametersCombinations()
+        print(self.parametersCombinations)
+
+
 
     def _setParametersCombinations(self):
         paramsList = list(self.parameters.keys())
