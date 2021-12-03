@@ -5,16 +5,27 @@
         "agressive": 2
     },
     "BranchDir":{
-        "Default": 0,
         "Minimum Value": -1,
         "Maximum Value": 1
     },
     "NodeMethod": {
-        "automatic": -1, 
         "primal simplex": 0, 
         "dual simplex" : 1
     },
     "Cuts":{
+        "shutOff": 0
+    },
+    "Cuts Type 1":{
+        "shutOff" : 0,
+        "moderated" : 1,
+        "aggressive" : 2
+    },
+    "Cuts Type 2":{
+        "shutOff" : 0,
+        "moderated" : 1,
+        "aggressive" : 2
+    },
+    "Cuts Type 3":{
         "shutOff" : 0,
         "moderated" : 1,
         "aggressive" : 2
