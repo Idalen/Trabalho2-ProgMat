@@ -20,6 +20,11 @@ def guropiIteration(filePath,timeLimit=None):
     
     cost, a, cap = fileRetriever("./inputs/"+filePath)
     
+    print("Arquivo:", filePath, "\n")
+    print("Cost:", cost, "\n")
+    print("a:", a, "\n")
+    print("Cap:", cap, "\n")
+
     parametersPath = "./parameters.json"
     s = Solver(cost, a, cap, parametersPath, timeLimit)
     s.solve() 
