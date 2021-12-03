@@ -15,7 +15,7 @@
     "Cuts":{
         "shutOff": 0
     },
-    "Cuts Type 2":{
+    "ImpliedCuts":{
         "moderated" : 1,
         "aggressive" : 2
     }
