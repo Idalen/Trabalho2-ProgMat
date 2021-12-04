@@ -18,5 +18,11 @@
     "NetworkCuts":{
         "moderated" : 1,
         "aggressive" : 2
+    },
+    "CliqueCuts":{
+        "shutoff" : 0
+    },
+    "ImpliedCuts":{
+        "shutoff" : 0
     }
 }
