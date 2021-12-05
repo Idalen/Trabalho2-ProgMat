@@ -41,7 +41,7 @@ def getConfNo(line,defaultName="0",dataParams=4):
 
 def createTableLaTeX(filePath):
     fullList =[""]*11
-    print(fullList)
+    #print(fullList)
     with open(filePath, 'r') as f:
         lines = f.readlines()
     matrix = [line.replace(" ","").replace("\n","").split(",") for line in lines]
@@ -52,7 +52,7 @@ def createTableLaTeX(filePath):
         print(line)
         auxText = "${}$ & ${}$ & ${}$ & ${}$ & $".format(line[0], line[1], line[2], line[3])
         lineNo = getConfNo(line)
-        print(lineNo)
+        #print(lineNo)
         auxText += lineNo + "$ " + lineEnding
         fullList[int(lineNo)] = auxText
     for i in range(11):
@@ -65,5 +65,5 @@ def createTableLaTeX(filePath):
 
 files = [file for file in os.listdir("./results") if file.split(".")[-1] == "csv"]
 for file in files:
-    print(file)
+    #print(file)
     createTableLaTeX("./results/"+file)
