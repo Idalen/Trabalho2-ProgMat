@@ -1,28 +1,20 @@
 {
     "Presolve":{
-        "off": 0,
-        "conservative": 1,
-        "agressive": 2
+        "default": -1
     },
-    "BranchDir":{
-        "Minimum Value": -1,
-        "Maximum Value": 1
+    "VarBranch":{
+        "default": -1
     },
     "NodeMethod": {
-        "primal simplex": 0, 
-        "dual simplex" : 1
+        "default": -1
     },
     "Cuts":{
-        "shutOff": 0
+        "default": -1
     },
-    "NetworkCuts":{
-        "moderated" : 1,
-        "aggressive" : 2
+    "MIPSepCuts":{
+        "default": -1
     },
-    "CliqueCuts":{
-        "shutoff" : 0
-    },
-    "ImpliedCuts":{
-        "shutoff" : 0
+    "ZeroHalfCuts":{
+        "default": -1
     }
 }

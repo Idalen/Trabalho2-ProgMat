@@ -1,9 +1,9 @@
 {
     "Presolve":{
-        "off": 0
+        "default": -1
     },
     "VarBranch":{
-        "default": -1
+        "Maximum Infeasibility Branching": 2
     },
     "NodeMethod": {
         "default": -1

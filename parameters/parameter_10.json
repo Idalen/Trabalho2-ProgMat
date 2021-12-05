@@ -1,6 +1,6 @@
 {
     "Presolve":{
-        "off": 0
+        "default": -1
     },
     "VarBranch":{
         "default": -1
@@ -9,12 +9,12 @@
         "default": -1
     },
     "Cuts":{
-        "default": -1
+        "shutOff": 0
     },
     "MIPSepCuts":{
-        "default": -1
+        "shutOff": 0
     },
     "ZeroHalfCuts":{
-        "default": -1
+        "aggressive" : 2
     }
 }

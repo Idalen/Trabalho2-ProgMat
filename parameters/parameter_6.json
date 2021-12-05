@@ -1,12 +1,12 @@
 {
     "Presolve":{
-        "off": 0
+        "default": -1
     },
     "VarBranch":{
         "default": -1
     },
     "NodeMethod": {
-        "default": -1
+        "primal simplex": 0
     },
     "Cuts":{
         "default": -1

@@ -1,9 +1,9 @@
 {
     "Presolve":{
-        "off": 0
+        "default": -1
     },
     "VarBranch":{
-        "default": -1
+        "Pseudo Shadow Price Branching": 1
     },
     "NodeMethod": {
         "default": -1
