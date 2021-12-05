@@ -50,7 +50,7 @@ def createTableLaTeX(filePath):
     text = "\\begin{center}\n\\begin{tabular}{|c|c|c|c|c|}\n\\hline\n$nodeCount$ & $objVal$ & $objBound$ & $MIPGap$ & $conf$"+lineEnding
     for line in matrix[1:]:
         print(line)
-        auxText = "${}$ & ${}$ & ${}$ & ${}$ $".format(line[0], line[1], line[2], line[3])
+        auxText = "${}$ & ${}$ & ${}$ & ${}$ & $".format(line[0], line[1], line[2], line[3])
         lineNo = getConfNo(line)
         print(lineNo)
         auxText += lineNo + "$ " + lineEnding
@@ -67,4 +67,3 @@ files = [file for file in os.listdir("./results") if file.split(".")[-1] == "csv
 for file in files:
     print(file)
     createTableLaTeX("./results/"+file)
-    break
