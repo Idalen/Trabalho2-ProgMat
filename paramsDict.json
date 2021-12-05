@@ -1,0 +1,33 @@
+{
+    "Presolve":{
+        "-1": "default",
+        "0": "off"
+    },
+    "VarBranch":{
+        "-1": "default",
+        "0": "Pseudo Reduced Cost Branching", 
+        "1": "Pseudo Shadow Price Branching", 
+        "2": "Maximum Infeasibility Branching", 
+        "3": "Strong Branching"
+    },
+    "NodeMethod":{
+        "-1": "default",
+        "0": "primal simplex", 
+        "1": "dual simplex" ,
+        "2": "barrier" 
+    },
+    "Cuts":{
+        "-1": "default",
+        "0": "shutOff"
+    },
+    "MIPSepCuts":{
+        "-1": "default",
+        "0": "shutOff",
+        "2": "aggressive" 
+    },
+    "ZeroHalfCuts":{
+        "-1": "default",
+        "0": "shutOff",
+        "2": "aggressive" 
+    }
+}
